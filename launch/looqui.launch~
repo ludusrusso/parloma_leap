@@ -1,0 +1,7 @@
+<launch>
+  <node name="leap_motion" pkg="leap_motion" type="skeleton_sender.py" />
+  <node name="leap_parloma" pkg="leap_parloma" type="parloma.py" />
+  <node name="serial_bridge" pkg="serial_bridge" type="serial_node.py" >
+    <param name="port" value="/dev/hand"/>
+  </node>
+</launch>
